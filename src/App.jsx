@@ -1,9 +1,15 @@
 import { Navbar } from "./components/Navbar"
+import { Board } from "./components/board/Board"
+import { Sidebar } from "./components/sidebar/Sidebar"
 
 export const App = () => {
   return (
-    <div className="h-screen w-screen">
+    <main className="h-screen w-screen flex flex-col">
       <Navbar/>
-    </div>
+      <section className="w-screen h-full flex felx-row flex-wrap bg-stone-400">
+        <Sidebar/>
+        <Board/>
+      </section>
+    </main>
   )
 }
