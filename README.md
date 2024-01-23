@@ -1,8 +1,23 @@
-# React + Vite
+# Xticks Notes- Trello like Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ ## Description
 
-Currently, two official plugins are available:
+This is a Web Storage application, made for both manage sticky notes and a Kanban Board
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### The main idea of this application is to replicate the Trello behavior
+
+- For now it is currently in development, it will have features like
+    
+    - Drag and Drop for images, links, and other embedded objects
+    - A Trash Can for notes
+    - A Kanban Board with Dynamic Properties
+    - Sticky Notes
+    - And personalized user themes
+
+
+## Looking for assistance in:
+    - Logo ideas
+    - Features you would like 
+    - Design improvement
+
+**You can download this repo or fork it, i hope it is helpfull for you, Happy Coding!**
