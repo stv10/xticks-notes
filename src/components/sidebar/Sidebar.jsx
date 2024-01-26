@@ -1,6 +1,27 @@
+import { useState } from "react";
+import SidebarArrowSVG from "../../assets/SidebarArrowSVG";
+
 export const Sidebar = () => {
+  const [isHidden, setIsHidden] = useState(false);
+  function toggleNavbar() {
+    const sidebar = document.getElementById("sidebar");
+
+    sidebar.classList.toggle("translate-x-0");
+    sidebar.classList.toggle("translate-x-[-240px]");
+
+    const children = sidebar.children;
+
+    for (let i = 0; i < children.length; i++) {
+      children[i].classList.toggle("hidden");
+    }
+
+    setIsHidden(!isHidden);
+  }
   return (
-    <aside className="h-full w-1/4 max-w-[260px] bg-slate-800 bg-opacity-80 z-10 flex flex-col relative leading-[20px]">
+    <aside
+      className="h-full w-1/4 max-w-[260px] bg-slate-800 bg-opacity-80 z-10 flex flex-col relative leading-[20px] transition-all ease-linear"
+      id="sidebar"
+    >
       <section className="h-20 w-full border-b-[1px] border-b-slate-500 flex items-center gap-2">
         <a href="/">
           <div className="h-8 w-8 bg-gradient-to-b from-neutral-500 to-zinc-400 flex items-center justify-center text-center rounded">
@@ -12,7 +33,10 @@ export const Sidebar = () => {
           <span>Gratuito</span>
         </div>
         <div className="p-1">
-          <button className="h-7 w-7 rounded-none flex items-center justify-center p-0">
+          <button
+            className="h-7 w-7 rounded-none flex items-center justify-center p-0"
+            onClick={toggleNavbar}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -25,7 +49,15 @@ export const Sidebar = () => {
           </button>
         </div>
       </section>
-      <section className="block pt-3 relative">
+      <div className="p-1 hidden right-0 relative">
+        <button
+          className="h-7 w-7 rounded-none flex items-center justify-center p-0"
+          onClick={toggleNavbar}
+        >
+          <SidebarArrowSVG/>
+        </button>
+      </div>
+      {/* <section className="block pt-3 relative">
         <a
           href="/"
           className="flex text-sm text-stone-300 hover:text-stone-300 items-center w-full h-8 hover:bg-slate-600 ps-4"
@@ -265,7 +297,7 @@ export const Sidebar = () => {
             ></path>
           </svg>
         </a>
-      </section>
+      </section> */}
     </aside>
   );
 };
