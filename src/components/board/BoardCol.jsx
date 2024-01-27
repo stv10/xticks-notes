@@ -1,7 +1,9 @@
+import { CardsList } from "./cards/CardsList"
+
 export const BoardCol = () => {
   return (
-    <div className="bg-slate-500 h-full max-w-64 flex-grow rounded">
-
-    </div>
+    <li className="bg-transparent h-full max-w-64 flex-grow rounded">
+      <CardsList/>
+    </li>
   )
 }

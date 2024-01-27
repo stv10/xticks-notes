@@ -6,7 +6,7 @@ export const App = () => {
   return (
     <main className="h-screen w-screen flex flex-col">
       <Navbar/>
-      <section className="w-screen h-full flex flex-wrap bg-stone-400">
+      <section className="w-screen h-full flex flex-nowrap flex-grow flex-shrink basis-0 bg-stone-400">
         <Sidebar/>
         <Board/>
       </section>

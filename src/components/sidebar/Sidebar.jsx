@@ -6,8 +6,8 @@ export const Sidebar = () => {
   function toggleNavbar() {
     const sidebar = document.getElementById("sidebar");
 
-    sidebar.classList.toggle("translate-x-0");
-    sidebar.classList.toggle("translate-x-[-240px]");
+    sidebar.classList.toggle("max-w-[260px]");
+    sidebar.classList.toggle("max-w-[16px]");
 
     const children = sidebar.children;
 
